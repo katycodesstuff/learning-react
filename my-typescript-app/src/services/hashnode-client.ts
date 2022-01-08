@@ -1,8 +1,8 @@
-import { Article, HashnodeResponse } from "../models/hashnode";
+import { HashnodeResponse } from "../models/hashnode";
 
 export class HashnodeClient {
 
-    public query = `
+    private query = `
     query GetUserArticles($page: Int!) {
         user(username: "katycodesstuff") {
             publication {
@@ -14,6 +14,7 @@ export class HashnodeClient {
             }
         }
     }`
+
     public async fetchBlogPosts(): Promise<HashnodeResponse> {
         return await this.gql(this.query, {page: 0});
     }

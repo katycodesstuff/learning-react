@@ -1,10 +1,10 @@
 :root {
---brand-color: #F29559;
---dark-color: #202C39;
---mid-color: #283845;
---light-color: #FFFFFF;
+  --brand-color: #F29559;
+  --dark-color: #202C39;
+  --mid-color: #283845;
+  --light-color: #FFFFFF;
 
-background-color: var(--light-color);
+  background-color: var(--light-color);
 }
 
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Article } from '../../models/hashnode';
 import { HashnodeClient } from '../../services/hashnode-client';
-import BlogSummary from '../BlogSummary/BlogSummary';
+import BlogGrid from '../BlogGrid/BlogGrid';
 
 interface Props {}
 
@@ -21,20 +21,9 @@ function MainPage(props: Props) {
         func();
     }, []); // [] means only load once on initial page render
 
-    let render = [];
-    if (articles) {
-        for (let article of articles) {
-            const { title, brief, slug } = article;
-            const link = `https://katycodesstuff.hashnode.dev/${slug}`;
-            render.push(<li><BlogSummary title={title} summary={brief} link={link} /></li>)
-        }
-    }
-
     return (
         <div>
-            <h1>Hello World</h1>
-            <p>Yada yada yada</p>
-            { loading ? "Loading blog posts..." : <ul>{render}</ul>}
+            { loading ? "Loading blog posts..." : <BlogGrid articles={articles} /> }
         </div>
     )
 }

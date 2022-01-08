@@ -12,8 +12,9 @@ function BlogSummary(props: Props) {
 
     return (
         <div className='box'>
-            <a href={link}><h1>{title}</h1></a>
+            <h2>{title}</h2>
             <p>{summary}</p>
+            <a href={link}>Go to Hashnode article ➡</a>
         </div>
     )
 }

@@ -4,11 +4,22 @@ a {
 
 .box {
     /* height: 500px; */
-    max-width: 80%;
+    /* max-width: 80%; */
     border-width: 10px;
     background-color: var(--brand-color);
     border-color: var(--mid-color);
     padding: 20px 20px 20px 20px;
-    margin: 10px 10px 10px 10px;
+    margin: 10px 20px 10px 20px;
     color: var(--dark-color);
+    transition: 1s ease;
+    flex-grow: 1;
+    flex-basis: 200px;
+    border-radius: 20px;
+}
+
+.box:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: 1s ease;
 }

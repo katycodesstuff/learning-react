@@ -1,0 +1,11 @@
+h1 {
+    color: var(--light-color);
+    font-size: 40px;
+    padding-left:50px;
+}
+
+.header {
+    padding: 5px 0px 5px 0px;
+    width: 100%;
+    background-color: var(--mid-color);
+}
