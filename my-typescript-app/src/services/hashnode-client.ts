@@ -1,3 +1,5 @@
+import { Article, HashnodeResponse } from "../models/hashnode";
+
 export class HashnodeClient {
 
     public query = `
@@ -12,7 +14,7 @@ export class HashnodeClient {
             }
         }
     }`
-    public async fetchBlogPosts(): Promise<any> {
+    public async fetchBlogPosts(): Promise<HashnodeResponse> {
         return await this.gql(this.query, {page: 0});
     }
 
