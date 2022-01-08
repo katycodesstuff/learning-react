@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Article } from '../../models/hashnode';
 import { HashnodeClient } from '../../services/hashnode-client';
+import BlogSummary from '../BlogSummary/BlogSummary';
 
 interface Props {}
 
@@ -25,7 +26,7 @@ function MainPage(props: Props) {
         for (let article of articles) {
             const { title, brief, slug } = article;
             const link = `https://katycodesstuff.hashnode.dev/${slug}`;
-            render.push(<li><a href={link}><em>{title}</em></a> <p>{brief}</p></li>);
+            render.push(<li><BlogSummary title={title} summary={brief} link={link} /></li>)
         }
     }
 
