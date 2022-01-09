@@ -12,7 +12,7 @@ function BlogGrid(props: Props): any {
 
     return (
         <div className='blog-grid'>
-            {articles.map((article: Article) => <BlogSummary article={article} />)}
+            {articles.map((article: Article, i: number) => <BlogSummary key={i} article={article} />)}
         </div>
     )
 }

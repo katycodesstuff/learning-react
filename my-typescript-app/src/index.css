@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Mukta', sans-serif;
+  color: var(--dark-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,5 +16,15 @@ h1 {
 }
 
 h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 200%;
+}
+
+h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 150%;
+}
+
+.cursive {
   font-family: 'Dancing Script', cursive;
 }

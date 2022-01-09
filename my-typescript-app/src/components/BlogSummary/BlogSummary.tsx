@@ -5,6 +5,7 @@ import './BlogSummary.css'
 
 interface Props {
    article: Article
+   key: number
 }
 
 function BlogSummary(props: Props) {
@@ -12,7 +13,7 @@ function BlogSummary(props: Props) {
 
     return (
         <div className='box'>
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <p>{brief}</p>
 
             <div className='info-grid small-text'>

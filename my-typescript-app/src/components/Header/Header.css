@@ -1,13 +1,30 @@
 h1 {
-    color: var(--light-color);
+    color: var(--dark-color);
     font-size: 40px;
     padding-left:50px;
+    transition: 0.2s;
 }
 
-.header {
+.light-text {
+    color: var(--light-color);
+}
+
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    width: 100%;
     padding: 5px 0px 5px 0px;
     width: 100%;
     background-color: var(--brand-color);
-    box-shadow: 0 0 8px 0 gray;
-    -webkit-box-shadow: 0 0 8px 0 gray;
+    /* box-shadow: 0 0 8px 0 gray;
+    -webkit-box-shadow: 0 0 8px 0 gray; */
+}
+@media (max-width:780px) {
+    header {
+        text-align: center;
+    }
+    h1 {
+        padding-left: 0px;
+    }
 }

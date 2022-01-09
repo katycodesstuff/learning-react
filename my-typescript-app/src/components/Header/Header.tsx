@@ -7,8 +7,8 @@ function Header(props: Props) {
     const {} = props
 
     return (
-        <header className='header'>
-            <h1>KatyCodesStuff</h1>
+        <header>
+            <h1 id='header'>KatyCodesStuff<span className='light-text'>Blog</span></h1>
         </header>
     )
 }
