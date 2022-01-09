@@ -1,0 +1,19 @@
+.article {
+    padding: 80px 100px 100px 100px;
+    margin: 0px;
+    background-color: var(--mid-color);
+    color: var(--light-color);
+    border-radius: 20px;
+}
+
+img {
+    max-width: 90%;
+    max-height: 100%;
+    margin: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+/* h1 {
+    font-family: var(--header-font);
+} */

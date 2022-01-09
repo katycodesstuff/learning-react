@@ -1,18 +1,19 @@
 import React from 'react'
-import { Article } from '../../models/hashnode'
+import { ArticleSummary } from '../../models/hashnode'
 import BlogSummary from '../BlogSummary/BlogSummary';
 import './BlogGrid.css';
 
 interface Props {
-    articles: Article[];
+    articles: ArticleSummary[];
+    setArticle: any
 }
 
 function BlogGrid(props: Props): any {
-    const { articles } = props;
+    const { articles, setArticle } = props;
 
     return (
         <div className='blog-grid'>
-            {articles.map((article: Article, i: number) => <BlogSummary key={i} article={article} />)}
+            {articles.map((article: ArticleSummary, i: number) => <BlogSummary key={i} article={article} setArticle={setArticle}/>)}
         </div>
     )
 }

@@ -1,18 +1,19 @@
 import moment from 'moment';
 import React from 'react'
-import { Article } from '../../models/hashnode';
+import { ArticleSummary } from '../../models/hashnode';
 import './BlogSummary.css'
 
 interface Props {
-   article: Article
+   article: ArticleSummary
    key: number
+   setArticle: any
 }
 
 function BlogSummary(props: Props) {
     const { title, brief, slug, dateAdded, totalReactions } = props.article;
 
     return (
-        <div className='box'>
+        <div className='box' onClick={() => props.setArticle(props.article)}>
             <h3>{title}</h3>
             <p>{brief}</p>
 

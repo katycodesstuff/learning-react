@@ -1,0 +1,25 @@
+.landing-page {
+    position: relative;
+    background-color: var(--brand-color);
+    height: 500px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 600%;
+    color: var(--light-color);
+    transition: 1s ease;
+}
+
+.title:hover {
+    color: var(--mid-color);
+}
+
+.title-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--dark-color);
+    text-decoration-thickness: 10px;
+    -moz-text-decoration-color: var(--dark-color);
+}

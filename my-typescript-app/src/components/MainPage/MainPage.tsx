@@ -1,35 +1,49 @@
 import React, { useEffect, useState } from 'react'
-import { Article } from '../../models/hashnode';
+import { Article, ArticleSummary } from '../../models/hashnode';
 import { HashnodeClient } from '../../services/hashnode-client';
 import BlogGrid from '../BlogGrid/BlogGrid';
+import BlogPost from '../BlogPost/BlogPost';
 import './MainPage.css'
 
-interface Props {}
+interface Props {
+    article: ArticleSummary | null;
+    setArticle: any;
+}
 
 function MainPage(props: Props) {
-    const {} = props
-    const [articles, setArticles] = useState<Article[]>([]);
+    const { article, setArticle } = props;
+    const [articles, setArticles] = useState<ArticleSummary[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
-    const maxNumberOfArticles = 3;
+    const [ currentArticle, setCurrentArticle ] = useState<Article | null>(null);
 
     useEffect(() => {
         async function func(): Promise<void> {
             const client = new HashnodeClient();
             const result = await client.fetchBlogPosts();
-            const articles = result.data.user.publication.posts;
-            if (articles.length > maxNumberOfArticles) {
-                setArticles(articles.slice(0, maxNumberOfArticles));
-            }
-            else {
-                setArticles(articles);
-            }
+            const articles = result;
+            setArticles(articles);
             setLoading(false);
         }
         func();
     }, []); // [] means only load once on initial page render
 
+    useEffect(() => {
+        async function func(): Promise<void> {
+            const client = new HashnodeClient();
+            const result = await client.fetchBlogPost(article!.slug);
+            setCurrentArticle(result);
+        }
+        if (article != null) {
+            func();
+        }
+    }, [ article ]); // trigger every time state changes
+
     return (
         <div className='main-page'>
+            {
+                currentArticle &&
+                <BlogPost article={currentArticle} />
+            }
             <h2 className='heading'>About the author</h2>
             <p className='text'>Katy is a Principal Software Engineer and Team Lead based in the UK.
                  She primarily works with C#/.NET, Angular and TS. <br />
@@ -39,7 +53,7 @@ function MainPage(props: Props) {
             <p className='text'>You can find Katy on Twitter, GitHub, and Hashnode.</p>
     
             <h2 className='heading'>Latest articles</h2> 
-            { loading ? <div className='centered-div loading'>Loading blog posts...</div> : <BlogGrid articles={articles} /> }
+            { loading ? <div className='centered-div loading'>Loading blog posts...</div> : <BlogGrid articles={articles} setArticle={setArticle} /> }
         </div>
     )
 }

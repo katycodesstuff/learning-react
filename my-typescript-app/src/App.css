@@ -3,9 +3,45 @@
   --dark-color: #202C39;
   --mid-color: #283845;
   --light-color: #FFFFFF;
+  --text-font: 'Mukta', sans-serif;
+  --header-font: 'Dancing Script', cursive;
+  --logo-font: 'Comforter Brush', cursive;
 
   background-color: var(--light-color);
 }
+
+body {
+  margin: 0;
+  font-family: var(--text-font);
+  color: var(--dark-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-family: var(--logo-font);
+  pointer-events: none;
+}
+
+h2 {
+  font-family: var(--header-font);
+  font-size: 200%;
+}
+
+h3 {
+  font-family: var(--header-font);
+  font-size: 150%;
+}
+
+.cursive {
+  font-family: 'Dancing Script', cursive;
+}
+
 
 .loading {
   color: var(--dark-color);
@@ -32,6 +68,28 @@
   padding: 20px;
 }
 
+button {
+  height: 50px;
+  padding: 10px;
+  margin: 20px;
+  font-family: var(--text-font);
+  color: var(--light-color);
+  background-color: var(--mid-color);
+  border-radius: 20px;
+  border-width: 0px;
+  transition: 1s ease;
+}
+
+button:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  transition: 1s ease;
+}
+
+button:active {
+  background-color: var(--dark-color);
+}
 /* .App {
   text-align: center;
 }

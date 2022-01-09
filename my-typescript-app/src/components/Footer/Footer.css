@@ -1,0 +1,17 @@
+footer {
+    display: flex;
+    padding: 50px 0px 50px 0px;
+    width: 100%;
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    /* height: 100px; */
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+@media (max-width:780px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

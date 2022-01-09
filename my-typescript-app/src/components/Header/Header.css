@@ -10,6 +10,8 @@ h1 {
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     z-index: 1;
     position: sticky;
     top: 0;
@@ -23,6 +25,7 @@ header {
 @media (max-width:780px) {
     header {
         text-align: center;
+        flex-direction: column;
     }
     h1 {
         padding-left: 0px;

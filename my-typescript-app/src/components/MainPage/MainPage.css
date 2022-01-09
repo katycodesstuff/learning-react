@@ -1,0 +1,17 @@
+.main-page {
+    padding: 50px 100px;
+    /* margin: 20% 0%; */
+}
+
+.heading {
+    padding: 0px 40px;
+    text-decoration: underline;
+    text-decoration-color: var(--brand-color);
+    text-decoration-thickness: 5px;
+    text-decoration-skip: edges;
+    -moz-text-decoration-color: var(--brand-color);
+}
+
+.text {
+    padding: 0px 40px;
+}
