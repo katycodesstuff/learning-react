@@ -1,16 +1,13 @@
-a {
-    color: var(--light-color);
+h2 {
+    color: var(--brand-color);
 }
 
 .box {
-    /* height: 500px; */
-    /* max-width: 80%; */
     border-width: 10px;
-    background-color: var(--brand-color);
-    border-color: var(--mid-color);
+    background-color: var(--mid-color);
     padding: 20px 20px 20px 20px;
     margin: 10px 20px 10px 20px;
-    color: var(--dark-color);
+    color: var(--light-color);
     transition: 1s ease;
     flex-grow: 1;
     flex-basis: 200px;
@@ -22,4 +19,26 @@ a {
     -ms-transform: scale(1.05);
     transform: scale(1.05);
     transition: 1s ease;
+    background-color: var(--dark-color);
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info-item:hover {
+    text-decoration: underline;
+    color: var(--brand-color);
+}
+
+a {
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--brand-color);
 }

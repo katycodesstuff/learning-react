@@ -7,6 +7,13 @@
   background-color: var(--light-color);
 }
 
+.small-text {
+  font-size: smaller;
+}
+
+.right-align-text {
+  text-align: right;
+}
 
 
 /* .App {

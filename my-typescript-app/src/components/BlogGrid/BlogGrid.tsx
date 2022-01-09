@@ -12,13 +12,9 @@ function BlogGrid(props: Props): any {
 
     return (
         <div className='blog-grid'>
-            {articles.map((article: Article) => <BlogSummary title={article.title} summary={article.brief} link={getLink(article.slug)} />)}
+            {articles.map((article: Article) => <BlogSummary article={article} />)}
         </div>
     )
-}
-
-function getLink(resource: string) : string {
-    return `https://katycodesstuff.hashnode.dev/${resource}`
 }
 
 export default BlogGrid

@@ -10,6 +10,8 @@ export class HashnodeClient {
                     title
                     brief
                     slug
+                    totalReactions
+                    dateAdded
                 }
             }
         }

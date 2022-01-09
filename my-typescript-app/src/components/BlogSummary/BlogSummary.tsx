@@ -1,22 +1,31 @@
+import moment from 'moment';
 import React from 'react'
+import { Article } from '../../models/hashnode';
 import './BlogSummary.css'
 
 interface Props {
-    title: string;
-    summary: string;
-    link: string;
+   article: Article
 }
 
 function BlogSummary(props: Props) {
-    const { title, summary, link } = props;
+    const { title, brief, slug, dateAdded, totalReactions } = props.article;
 
     return (
         <div className='box'>
             <h2>{title}</h2>
-            <p>{summary}</p>
-            <a href={link}>Go to Hashnode article ➡</a>
+            <p>{brief}</p>
+
+            <div className='info-grid small-text'>
+                <span className='info-item'>❤ {totalReactions}</span>
+                <span className='info-item'>{moment(dateAdded.toString(), 'YYYY-MM-DDTHH:mm:ss.fffZ').fromNow()}</span>
+                <span><a href={getLink(slug)}>Go to Hashnode article ➡</a></span>
+            </div>
         </div>
     )
+}
+
+function getLink(resource: string) : string {
+    return `https://katycodesstuff.hashnode.dev/${resource}`
 }
 
 export default BlogSummary
