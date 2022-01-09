@@ -4,7 +4,15 @@
     background-color: var(--mid-color);
     color: var(--light-color);
     border-radius: 20px;
+    text-overflow: clip;
 }
+@media (max-width:780px) {
+    .article {
+        padding: 20px 30px;
+        margin: 0px 10px;
+    }
+}
+
 
 img {
     max-width: 90%;

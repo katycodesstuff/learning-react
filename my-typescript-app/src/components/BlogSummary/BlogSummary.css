@@ -16,6 +16,11 @@ h3 {
     -webkit-box-shadow: 0px 0px 8px 0px gray;
     cursor: pointer;
 }
+@media (max-width:780px) {
+    .box {
+        margin: 10px 5px 10px 5px;
+    }
+}
 
 .box:hover {
     -webkit-transform: scale(1.05);
