@@ -7,6 +7,10 @@
   background-color: var(--light-color);
 }
 
+.loading {
+  color: var(--dark-color);
+}
+
 .small-text {
   font-size: smaller;
 }
@@ -15,6 +19,18 @@
   text-align: right;
 }
 
+.centered-div {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  padding: 20px;
+}
 
 /* .App {
   text-align: center;

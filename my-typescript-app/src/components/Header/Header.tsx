@@ -7,9 +7,9 @@ function Header(props: Props) {
     const {} = props
 
     return (
-        <div className='header'>
+        <header className='header'>
             <h1>KatyCodesStuff</h1>
-        </div>
+        </header>
     )
 }
 

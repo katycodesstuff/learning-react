@@ -22,9 +22,9 @@ function MainPage(props: Props) {
     }, []); // [] means only load once on initial page render
 
     return (
-        <div>
-            { loading ? "Loading blog posts..." : <BlogGrid articles={articles} /> }
-        </div>
+        <>
+            { loading ? <div className='centered-div loading'>Loading blog posts...</div> : <BlogGrid articles={articles} /> }
+        </>
     )
 }
 

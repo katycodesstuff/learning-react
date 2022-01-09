@@ -1,5 +1,5 @@
+import { Menu } from '@mui/icons-material';
 import { Toolbar, Typography, AppBar, Box, Button, IconButton } from '@mui/material'
-import { Menu } from '@mui/icons-material'
 import { makeStyles } from '@mui/styles'
 
 interface Props {}
