@@ -1,5 +1,6 @@
 .main-page {
-    padding: 20px 100px;
+    padding: 20px 60px;
+    margin: 0px 100px;
 }
 
 @media (max-width:780px) {

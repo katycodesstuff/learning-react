@@ -6,6 +6,7 @@ function LandingPage() {
             <br />
             <br />
             <br />
+            <br />
             <span className='title-underline cursive title'>Welcome stranger!</span>
             <span><br />You've stumbled on my blog. Scroll to see my latest articles.</span>
         </div>

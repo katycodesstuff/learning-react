@@ -38,7 +38,7 @@ header {
 }
 
 .logo {
-    color: var(--dark-color);
+    color: var(--mid-color);
     font-family: var(--logo-font);
     font-size: 40px;
     font-weight: bolder;
