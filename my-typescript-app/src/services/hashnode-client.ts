@@ -31,7 +31,7 @@ export class HashnodeClient {
         return articles;
     }
 
-    public async fetchBlogPost(slug: string): Promise<Article> {
+    public async fetchBlogPost(slug: string): Promise<Article | null> {
         const query = `
         query {
             post(slug: "${slug}"
