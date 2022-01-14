@@ -1,11 +1,6 @@
-import React from 'react'
 import './LandingPage.css'
 
-interface Props {}
-
-function LandingPage(props: Props) {
-    const {} = props
-
+function LandingPage() {
     return (
         <div className='landing-page'>
             <br />

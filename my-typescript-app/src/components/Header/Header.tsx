@@ -14,13 +14,10 @@ function Header(props: Props) {
 
     useEffect(() => {
         setScrolledFromWindow(setScrolled);
+        window.onscroll = () => { setScrolledFromWindow(setScrolled); }
 
-        window.removeEventListener('scroll', () => {
-            setScrolledFromWindow(setScrolled);
-        });
-        window.addEventListener('scroll', () => {
-            setScrolledFromWindow(setScrolled);
-        });
+        // returning a function cleans up during component dismount
+        return () => { window.onscroll = null; };
     }, [ ]);
 
     const showShadow = shadow ? 'shadow' : '';

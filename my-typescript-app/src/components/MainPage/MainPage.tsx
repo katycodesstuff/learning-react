@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ArticleSummary } from '../../models/hashnode';
 import { HashnodeClient } from '../../services/hashnode-client';
 import BlogGrid from '../BlogGrid/BlogGrid';
 import './MainPage.css'
 
-interface Props {
-}
-
-function MainPage(props: Props) {
-    const { } = props;
+function MainPage() {
     const [articles, setArticles] = useState<ArticleSummary[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
 
@@ -17,6 +13,7 @@ function MainPage(props: Props) {
             const client = new HashnodeClient();
             const result = await client.fetchBlogPosts(); 
             const articles = result;
+
             setArticles(articles);
             setLoading(false);
         }
