@@ -1,21 +1,46 @@
-import React, { useState } from 'react'
-import { ArticleSummary } from '../../models/hashnode';
-import { RandomArticle } from '../../services/RandomArticle'
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { RandomArticle } from '../../services/RandomArticle';
 import './Header.css'
 
 interface Props {
-    randomArticleOnClick: any;
+    shadow: boolean;
 }
 
 function Header(props: Props) {
-    const { randomArticleOnClick } = props
+    const { shadow } = props
+    const [scrolled, setScrolled] = useState<boolean>(false);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        setScrolledFromWindow(setScrolled);
+
+        window.removeEventListener('scroll', () => {
+            setScrolledFromWindow(setScrolled);
+        });
+        window.addEventListener('scroll', () => {
+            setScrolledFromWindow(setScrolled);
+        });
+    }, [ ]);
+
+    const showShadow = shadow ? 'shadow' : '';
+    const headerClass = scrolled ? 'scrolled' : showShadow;
+    const logoLightTextClass = scrolled ? '' : 'light-text';
+    const logoClass = scrolled ? 'logo scrolled-logo' : 'logo';
 
     return (
-        <header>
-            <h1 id='header'>KatyCodesStuff<span className='light-text'>Blog</span></h1>
-            <button onClick={randomArticleOnClick}>Go to random article</button>
+        <header className={headerClass}>
+            <Link className={logoClass} to='/'>KatyCodesStuff<span className={logoLightTextClass}>Blog</span></Link>
+            <button onClick={async (event) => {
+                const randomArticle = await new RandomArticle().getRandomArticle();
+                navigate(`/article/${randomArticle.slug}`)
+            }}>Go to random article</button>
         </header>
     )
+}
+
+function setScrolledFromWindow(setScrolled: (value: boolean) => void) {
+    setScrolled(window.scrollY >= 100);
 }
 
 export default Header

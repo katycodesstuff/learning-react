@@ -21,16 +21,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  font-size: smaller;
 }
 
 h1 {
-  font-family: var(--logo-font);
-  pointer-events: none;
+  font-family: var(--header-font);
+  font-size: 200%;
 }
 
 h2 {
   font-family: var(--header-font);
-  font-size: 200%;
+  font-size: 180%;
 }
 
 h3 {
@@ -71,7 +72,7 @@ h3 {
 button {
   height: 50px;
   padding: 10px;
-  margin: 20px;
+  margin: 15px;
   font-family: var(--text-font);
   color: var(--light-color);
   background-color: var(--mid-color);
@@ -85,6 +86,7 @@ button:hover {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
   transition: 1s ease;
+  cursor: pointer;
 }
 
 button:active {

@@ -5,15 +5,14 @@ import './BlogGrid.css';
 
 interface Props {
     articles: ArticleSummary[];
-    setArticle: any
 }
 
 function BlogGrid(props: Props): any {
-    const { articles, setArticle } = props;
+    const { articles } = props;
 
     return (
         <div className='blog-grid'>
-            {articles.map((article: ArticleSummary, i: number) => <BlogSummary key={i} article={article} setArticle={setArticle}/>)}
+            {articles.map((article: ArticleSummary, i: number) => <BlogSummary key={i} article={article}/>)}
         </div>
     )
 }

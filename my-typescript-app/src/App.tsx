@@ -1,25 +1,27 @@
-import { useState } from 'react';
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
-import LandingPage from './components/LandingPage/LandingPage';
-import MainPage from './components/MainPage/MainPage';
-import { ArticleSummary } from './models/hashnode';
 import { RandomArticle } from './services/RandomArticle';
+import { useNavigate } from 'react-router-dom';
+import Home from './pages/Home';
+import { Routes, Route } from "react-router-dom";
+import Article from './pages/Article';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
-  const [article, setArticle] = useState<ArticleSummary | null>(null);
 
+  const navigate = useNavigate();
   return (
-    <div className="App">
-        <Header randomArticleOnClick={async (event: any)=> {
-                const randomArticle = await new RandomArticle().getRandomArticle();
-                setArticle(randomArticle);
-              }}/>
-        <LandingPage />
-        <MainPage article={article} setArticle={setArticle} />
-        <Footer />
-    </div>
+      <div className="App">
+          <ScrollToTop>
+            <Routes>
+                <Route path="/" element={<Home />}/>
+                <Route path={`/article/:id`} element={<Article />} />
+            </Routes>
+          </ScrollToTop>
+
+          <Footer />
+      </div>
   );
 }
 

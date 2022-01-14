@@ -16,9 +16,11 @@ export interface Article {
     isFeatured: boolean;
     content: string;
     coverImage: string;
-    tags: {
-      name: string
-    }
+    tags: [
+        {
+             name: string
+        }
+    ]
 }
 
 export interface HashnodeResponse {

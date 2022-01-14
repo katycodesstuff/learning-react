@@ -1,18 +1,30 @@
 .article {
-    padding: 80px 100px 100px 100px;
-    margin: 0px;
-    background-color: var(--mid-color);
-    color: var(--light-color);
-    border-radius: 20px;
-    text-overflow: clip;
+    padding: 20px 100px 100px 100px;
+    margin: 20px 100px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border-radius: 0px;
+    text-overflow: wrap;
+    /* box-shadow: 0px 0px 15px 0px gray;
+    -webkit-box-shadow: 0px 0px 15px 0px gray; */
+    word-wrap: break-word;
 }
 @media (max-width:780px) {
     .article {
         padding: 20px 30px;
-        margin: 0px 10px;
+        margin: 10px 10px;
     }
 }
 
+#article-title {
+    font-size: 300%;
+}
+
+.article-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 img {
     max-width: 90%;
