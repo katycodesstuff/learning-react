@@ -1,0 +1,5 @@
+.not-found-page {
+    text-align: center;
+    padding: 100px 160px;
+    background-color: var(--grey-color);
+}
