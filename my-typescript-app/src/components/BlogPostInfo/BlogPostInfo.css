@@ -40,10 +40,10 @@
     white-space: nowrap; 
     transition: 0.5s ease;
     text-align: center;
-    flex: 1 1 auto;
+    flex: 0 1 auto;
 }
 
 .tag:hover {
-    flex: 1.1 1 auto;
+    flex: 0.01 1 auto;
     transition: 0.5s ease;
 }

@@ -3,3 +3,9 @@
     padding: 100px 160px;
     background-color: var(--grey-color);
 }
+
+@media (max-width:780px) {
+    .not-found-page {
+        padding: 30px 30px;
+    }
+}
