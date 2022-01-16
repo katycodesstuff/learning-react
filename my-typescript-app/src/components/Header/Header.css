@@ -24,7 +24,7 @@ header {
 
 .scrolled {
     background-color: var(--light-color);
-    opacity: 97%;
+    opacity: 0.97;
     transition: 0.2s;
     box-shadow: 0px 0px 8px 0px gray;
     -webkit-box-shadow: 0px 0px 8px 0px gray;
