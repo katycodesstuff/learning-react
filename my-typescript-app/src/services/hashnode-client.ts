@@ -38,6 +38,7 @@ export class HashnodeClient {
                  hostname: "katycodesstuff.hashnode.dev") {
                 _id
                 title
+                slug
                 dateAdded
                 dateUpdated
                 isFeatured

@@ -3,16 +3,27 @@ article {
 }
 
 .article {
-    padding: 20px 100px 0px 100px;
+    padding: 20px 100px 20px 100px;
     margin: 20px 100px;
     background-color: var(--light-color);
     color: var(--dark-color);
-    border-radius: 0px;
 }
+
+.article-footer {
+    padding: 10px 100px 10px 100px;
+    margin: 20px 100px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
 @media (max-width:780px) {
     .article {
-        padding: 20px 30px;
-        margin: 10px 10px;
+        padding: 0px 30px;
+        margin: 0px 10px;
+    }
+    .article-footer {
+        padding: 10px 30px;
+        margin: 0px 10px;
     }
 }
 
@@ -44,4 +55,9 @@ article a {
 article a:hover {
     text-decoration: underline;
     color: var(--brand-color);
+}
+
+.comment {
+    margin-left: 10px;
+    color: var(--mid-color);
 }

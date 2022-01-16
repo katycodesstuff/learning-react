@@ -20,14 +20,9 @@ function BlogSummary(props: Props) {
             <div className='info-grid small-text'>
                 <span className='info-item'>❤ {totalReactions}</span>
                 <span className='info-item'>{moment(dateAdded.toString(), 'YYYY-MM-DDTHH:mm:ss.fffZ').fromNow()}</span>
-                <span><a href={getLink(slug)}>Go to Hashnode article ➡</a></span>
             </div>
         </div>
     )
-}
-
-function getLink(resource: string) : string {
-    return `https://katycodesstuff.hashnode.dev/${resource}`
 }
 
 export default BlogSummary

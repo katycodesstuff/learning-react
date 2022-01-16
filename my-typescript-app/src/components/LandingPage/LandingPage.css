@@ -1,7 +1,7 @@
 .landing-page {
     position: relative;
     background-color: var(--brand-color);
-    height: 580px;
+    padding: 150px 0px 270px 0px;
     justify-content: center;
     align-content: center;
     text-align: center;
