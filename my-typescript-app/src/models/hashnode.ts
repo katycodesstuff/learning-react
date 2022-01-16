@@ -12,6 +12,7 @@ export interface Article {
     slug: string;
     totalReactions: number;
     dateAdded: Date;
+    dateUpdated: Date;
     _id: string;
     isFeatured: boolean;
     content: string;

@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './NotFound.css';
 
-interface Props {}
-
-function NotFound(props: Props) {
+function NotFound() {
     const navigate = useNavigate();
     const location = useLocation();
 

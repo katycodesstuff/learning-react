@@ -6,7 +6,7 @@
   --grey-color: #e6e6e6;
   --text-font: 'Mukta', sans-serif;
   --header-font: 'Dancing Script', cursive;
-  --logo-font: 'Comforter Brush', cursive;
+  --logo-font: 'Comforter', cursive;
 
   background-color: var(--light-color);
 }
@@ -38,6 +38,13 @@ h2 {
 h3 {
   font-family: var(--header-font);
   font-size: 150%;
+}
+
+.section-border {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: var(--grey-color);
+  padding: 5px 0px;
 }
 
 .cursive {
@@ -79,14 +86,14 @@ button {
   background-color: var(--mid-color);
   border-radius: 20px;
   border-width: 0px;
-  transition: 1s ease;
+  transition: 0.5s ease;
 }
 
 button:hover {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
-  transition: 1s ease;
+  transition: 0.5s ease;
   cursor: pointer;
 }
 
@@ -98,4 +105,14 @@ button:active {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+a {
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--brand-color);
 }

@@ -39,6 +39,7 @@ export class HashnodeClient {
                 _id
                 title
                 dateAdded
+                dateUpdated
                 isFeatured
                 content
                 coverImage

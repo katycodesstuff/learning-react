@@ -1,5 +1,5 @@
-import moment from 'moment';
 import { Article } from '../../models/hashnode'
+import BlogPostInfo from '../BlogPostInfo/BlogPostInfo';
 import './BlogPost.css'
 
 interface Props {
@@ -12,18 +12,16 @@ function BlogPost(props: Props) {
     if (containsMaliciousCode(html)) {
         html = "Unable to display article";
     }
-    const date = moment(article.dateAdded);
+    
     return (
         <>
-         {/* <div className='article-details'>
-                <span>❤{article.totalReactions}</span>
-                <span>Tagged: {article.tags.map(t => t.name).join(', ')}</span>
-                <span>Written {date.date()}/{date.month()}/{date.year()}</span>
-                </div> */}
-        <div className='article'>
-            <h1 id='article-title'>{article.title}</h1>
-            {article.isFeatured && <span><i>This article was featured on Hashnode!</i></span>}
-            <article dangerouslySetInnerHTML={{ __html: removeClasses(html) }} />
+        <div className='section-border'>
+            <div className='article'>
+                <h1 id='article-title'>{article.title}</h1>
+                <BlogPostInfo article={article}/>
+                {article.isFeatured && <span><i>This article was featured on Hashnode!</i></span>}
+                <article dangerouslySetInnerHTML={{ __html: removeClasses(html) }} />
+            </div>
         </div>
         </>
     )

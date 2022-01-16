@@ -40,13 +40,3 @@ h3 {
     text-decoration: underline;
     color: var(--brand-color);
 }
-
-a {
-    color: var(--light-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: var(--brand-color);
-}

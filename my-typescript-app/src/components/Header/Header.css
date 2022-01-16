@@ -4,6 +4,7 @@ header {
     text-align: center;
     z-index: 1;
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     width: 100%;
     padding: 0px 0px 0px 0px;
@@ -17,6 +18,7 @@ header {
     }
     .logo {
         padding-left: 0px;
+        font-weight: 1rem;
     }
 }
 
@@ -41,7 +43,9 @@ header {
     color: var(--mid-color);
     font-family: var(--logo-font);
     font-size: 40px;
-    font-weight: bolder;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     margin: 10px;
 
     transition: 0.2s;

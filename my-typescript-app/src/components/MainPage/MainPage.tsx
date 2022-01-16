@@ -22,6 +22,7 @@ function MainPage() {
 
     return (
         <>
+        <div className='section-border'>
             <div className='main-page'>
             <h2 className='heading'>About the author</h2>
             <p className='text'>Katy is a Lead Software Engineer based in the UK.
@@ -30,7 +31,9 @@ function MainPage() {
                  As a team lead, she is focussing on developing the leadership skills to help her team succeed and thrive.
             </p>
             <p className='text'>You can find Katy on Twitter, GitHub, and Hashnode.</p>
-    
+            </div>
+        </div>
+        <div className='main-page'>
             <h2 className='heading'>Latest articles</h2> 
         </div>
         { loading 

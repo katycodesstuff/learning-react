@@ -1,10 +1,13 @@
+article {
+    word-wrap: break-word;
+}
+
 .article {
     padding: 20px 100px 0px 100px;
     margin: 20px 100px;
     background-color: var(--light-color);
     color: var(--dark-color);
     border-radius: 0px;
-    word-wrap: break-word;
 }
 @media (max-width:780px) {
     .article {
@@ -13,14 +16,16 @@
     }
 }
 
-#article-title {
-    font-size: 300%;
+pre {
+    overflow-x: scroll;
+    background-color: var(--mid-color);
+    color: var(--light-color);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.article-details{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#article-title {
+    font-size: 300%;
 }
 
 img {
@@ -29,4 +34,14 @@ img {
     margin: 20px;
     justify-content: center;
     align-content: center;
+}
+
+article a {
+    color: var(--brand-color);
+    text-decoration: none;
+}
+  
+article a:hover {
+    text-decoration: underline;
+    color: var(--brand-color);
 }
