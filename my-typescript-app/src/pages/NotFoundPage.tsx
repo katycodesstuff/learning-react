@@ -2,11 +2,7 @@ import Header from "../components/Header/Header"
 import MainPage from "../components/MainPage/MainPage"
 import NotFound from "../components/NotFound/NotFound"
 
-interface Props {}
-
-function NotFoundPage(props: Props) {
-    const {} = props
-
+function NotFoundPage() {
     return (
        <>
         <Header shadow={true}/>

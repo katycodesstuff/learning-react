@@ -10,7 +10,7 @@ function NotFound() {
         if (location.pathname !== '/page-not-found') {
             navigate('/page-not-found');
         }
-    }, []);
+    }, [ location, navigate ]);
 
     return (
         <div className='not-found-page'>

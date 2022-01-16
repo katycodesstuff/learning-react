@@ -13,12 +13,13 @@ function Header(props: Props) {
     const navigate = useNavigate();
 
     useEffect(() => {
-        setScrolledFromWindow(scrolled, setScrolled);
-        window.onscroll = () => { setScrolledFromWindow(scrolled, setScrolled); }
+        if (!window.onscroll) {
+            window.onscroll = () => { setScrolledFromWindow(scrolled, setScrolled); }
+        }
 
         // returning a function cleans up during component dismount
         return () => { window.onscroll = null; };
-    }, [ ]);
+    }, [ scrolled ]);
 
     const showShadow = shadow ? 'shadow' : '';
     const headerClass = scrolled ? 'scrolled' : showShadow;
@@ -41,7 +42,7 @@ function setScrolledFromWindow(scrolled: boolean, setScrolled: (value: boolean) 
     if (window.scrollY >= scrollPx && scrolled === false) {
         setScrolled(true);
     }
-    else if (window.scrollY < scrollPx) {
+    else if (window.scrollY < scrollPx && scrolled === true) {
         setScrolled(false);
     }
 }

@@ -2,7 +2,7 @@ import { Article } from '../../models/hashnode'
 import BlogPostInfo from '../BlogPostInfo/BlogPostInfo';
 import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
 import './BlogPost.css'
-import { HashnodeArticleUrl, HashnodeBaseUrl } from '../../external-links';
+import { HashnodeArticleUrl } from '../../external-links';
 
 interface Props {
     article: Article

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import BlogPost from '../components/BlogPost/BlogPost'
 import MainPage from '../components/MainPage/MainPage';
 import { Article as ArticleModel } from '../models/hashnode'
@@ -30,7 +30,7 @@ function ArticlePage() {
             setLoading(false);
         }
         func();
-    }, [ routeProps.id ]);
+    }, [ routeProps.id, navigate ]);
     
     return (
         <>
