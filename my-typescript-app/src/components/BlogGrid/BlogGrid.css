@@ -3,6 +3,7 @@
     padding: 0px 30px 0px 30px;
     flex-wrap: wrap;
     align-content: space-around;
+    min-width: 300px;
 }
 @media (max-width:780px) {
     .blog-grid {

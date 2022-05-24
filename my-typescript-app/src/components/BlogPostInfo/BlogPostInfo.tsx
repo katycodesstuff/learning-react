@@ -19,8 +19,8 @@ function BlogPostInfo(props: Props) {
         </div>
         <div className='article-details section-border'>
             <div className='article-item'><a href={HashnodeArticleUrl(article.slug)} >{article.totalReactions} reactions ❤</a></div>
-            <div className='article-item'>Written {added.toString()}</div>
-            <div className='article-item'>Last updated {updated.toString()}</div>
+            <div className='article-item'>Written {added.format('LLL')}</div>
+            <div className='article-item'>Last updated {updated.format('LLL')}</div>
             {article.isFeatured && <div><i>This article was featured on Hashnode! 🏆</i></div>}
         </div>
     </>
